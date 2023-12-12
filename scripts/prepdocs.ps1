@@ -37,11 +37,5 @@ $argumentList = "./scripts/prepdocs.py `"$cwd/data/*`" $adlsGen2StorageAccountAr
 "--openaiservice `"$env:AZURE_OPENAI_SERVICE`" --openaikey `"$env:OPENAI_API_KEY`" " + `
 "--openaiorg `"$env:OPENAI_ORGANIZATION`" --openaideployment `"$env:AZURE_OPENAI_EMB_DEPLOYMENT`" " + `
 "--openaimodelname `"$env:AZURE_OPENAI_EMB_MODEL_NAME`" --index $env:AZURE_SEARCH_INDEX " + `
-"--formrecognizerservice $env:AZURE_FORMRECOGNIZER_SERVICE --tenantid $env:AZURE_TENANT_ID -v" + `
-"--remove /data/Benefit_Options.pdf" + `
-"--remove /data/employee_handbook.pdf" + `
-"--remove /data/Northwind_Health_Plus_Benefits_Details.pdf" + `
-"--remove /data/Northwind_Standard_Benefits_Details.pdf" + `
-"--remove /data/PerksPlus.pdf" + `
-"--remove /data/role_library.pdf" + `
+"--formrecognizerservice $env:AZURE_FORMRECOGNIZER_SERVICE --tenantid $env:AZURE_TENANT_ID -v"
 Start-Process -FilePath $venvPythonPath -ArgumentList $argumentList -Wait -NoNewWindow
